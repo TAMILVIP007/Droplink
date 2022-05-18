@@ -1,9 +1,9 @@
 {
-    "name": "droplink-bypass",
+    "name": "telethon-droplink-bypass-link-genrator",
     "keywords": [
         "Telethon",
         "bypass",
-        "droplink"
+        "dik"
     ],
     "repository": "https://github.com/TAMILVIP007/Droplink.git",
     "env": {
