@@ -1,15 +1,17 @@
-from telethon import events, TelegramClient
 from os import getenv
-from droplink import getLink
+
 from dotenv import load_dotenv
+from telethon import TelegramClient, events
+
+from droplink import getLink
 
 load_dotenv()
 # Get your own values from my.telegram.org
-api_id = getenv('API_ID')
-api_hash = getenv('API_HASH')
-token = getenv('TOKEN')
+api_id = getenv("API_ID")
+api_hash = getenv("API_HASH")
+token = getenv("TOKEN")
 
-bot = TelegramClient('main', api_id, api_hash).start(bot_token=token)
+bot = TelegramClient("main", api_id, api_hash).start(bot_token=token)
 
 
 @bot.on(events.NewMessage(pattern="/start"))
@@ -20,7 +22,7 @@ async def start(event):
 @bot.on(events.NewMessage(pattern="/link"))
 async def link(event):
     try:
-        link = event.text.split(' ', 1)[1]
+        link = event.text.split(" ", 1)[1]
     except IndexError:
         await event.reply("`Usage: /link <link>`")
         return
@@ -32,5 +34,3 @@ async def link(event):
 
 
 bot.run_until_disconnected()
-
-
