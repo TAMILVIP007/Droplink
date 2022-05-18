@@ -1,0 +1,30 @@
+{
+    "name": "droplink-bypass",
+    "keywords": [
+        "Telethon",
+        "bypass",
+        "droplink"
+    ],
+    "repository": "https://github.com/TAMILVIP007/Droplink.git",
+    "env": {
+        "API_ID": {
+            "description": "get from my.telegram.org",
+            "required": "True"
+        },
+        "API_HASH ": {
+            "description": "get from my.telegram.org",
+            "required": "True"
+        },
+        "TOKEN ": {
+            "description": "get from @botfather",
+            "required": "True"
+        },
+    },
+    "stack": "heroku-20",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
