@@ -27,6 +27,3 @@ def getLink(url):
     except Exception as e:
         print(e)
         return None
-
-
-print(getLink("https://droplink.co/mIIxX"))
